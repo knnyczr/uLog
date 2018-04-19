@@ -1,7 +1,7 @@
 # Project-2 - Ulog.
 
 ##PRIORITY MATRIX
-![alt text](http://res.cloudinary.com/knnyczr/image/upload/v1524149562/Screen_Shot_2018-04-19_at_10.52.14_AM.png)
+![Alt text](/images/p-matrix.png?raw=true)
 
 ## MISSION STATEMENT
 A "U" friendly digital space to allow it's user to express your "U"-ness. A blog that allows you to upload snippets of your life and both with other over stuff you love.
