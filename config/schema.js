@@ -1,4 +1,4 @@
-\ulog
+\c ulog
 DROP TABLE IF EXISTS users CASCADE;
 DROP TABLE IF EXISTS photos CASCADE;
 
@@ -8,12 +8,12 @@ CREATE TABLE users(
   username VARCHAR(15) NOT NULL,
   password VARCHAR(20) NOT NULL,
   image VARCHAR(20),
-  description VARCHAR(150),
+  description VARCHAR(150)
 );
 
 CREATE TABLE photos(
   id SERIAL PRIMARY KEY,
-  creator REFRENCES users (id)
+  creator INT REFERENCES users (id),
   caption VARCHAR(150),
-  url VARCHAR(200),
+  url VARCHAR(200)
 );
