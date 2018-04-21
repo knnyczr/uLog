@@ -38,10 +38,10 @@ module.exports = {
       `, user)
   },
   destroy(username){
-    retunr db.none(`
+    return db.none(`
       DELETE
       FROM users
       WHERE username = $1
       `, username)
   }
-}; 
+};

@@ -1,12 +1,12 @@
 const r = require('express').Router();
+const userController = require('../users/userViewController');
+const postController = require('../controllers/photosController');
 
-const dump = (req,res) => res.send(`you're on your way to, ${req.path}`)
+const dump = (req,res) => res.send(`you're on your way to, ${req.path}`);
 
-r.route('/') //landing
-  .get(dump);
 
 r.route('/login')
-  .get(dump);
+  .get(userController.showloginForm);
 
 r.route('/register')
   .get(dump);
@@ -14,4 +14,7 @@ r.route('/register')
 r.route('/:id')
   .get(dump);
 
-module.exports = r; 
+r.route('/') //user login landing
+  .get(dump);
+
+module.exports = r;

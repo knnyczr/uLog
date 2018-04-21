@@ -2,13 +2,13 @@ const b = require('bcrypt');
 const user = require('../model/user');
 
 module.exports = {
-  
+
   async login(req, res, next) {
   // catching all the errors in one place and pretending that it goes down in order
   try {
       const { username, password } = req.body;
       const user = await User.findOne(username);
-      const valid = await bcrypt.compare(password, user.password_digest);
+      const valid = await bcrypt.compare(password, user.password);
 
       if(!valid) {
           throw { message : 'wrong password'}

@@ -1,0 +1,12 @@
+<% include ../partials/boilerplate %>
+
+<% data.forEach((el) => { %>
+  <div class="posts">
+    <div class="postcontainer">
+      <img src='<%=el.url%>' />
+    </div>
+  </div>
+<% }) %>
+
+
+<% include ../partials/end %>
