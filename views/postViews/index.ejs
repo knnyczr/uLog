@@ -1,12 +1,25 @@
 <% include ../partials/boilerplate %>
 
+
+<div class="wrapper">
+
 <% data.forEach((el) => { %>
-  <div class="posts">
-    <div class="postcontainer">
+
+    <div class="container">
       <img src='<%=el.url%>' />
+
+      
+
+      <div class="comlike">
+      <i class="fas fa-comment"></i>
+      <i class="fas fa-thumbtack"></i>
+      <i class="fas fa-heart"></i>
     </div>
-  </div>
+
+    </div>
+
 <% }) %>
 
+</div>
 
 <% include ../partials/end %>

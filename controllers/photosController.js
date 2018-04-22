@@ -14,7 +14,7 @@ module.exports ={
   index(req, res, next) {
     m.findAllPosts()
       .then(postData => {
-        console.log("yo i am in the photosController index function mofos",postData)
+        // console.log("yo i am in the photosController index function mofos",postData)
         res.locals.photos = postData;
         next();
       }).catch((err) => {
@@ -23,15 +23,13 @@ module.exports ={
       });
   },
   createP(req, res, next){
-    // res.render('postViews/index')
     m.createPost({
-      creator: req.body.creator,
+      // creator: req.body.creator,
       caption: req.body.caption,
-      url: req.body.caption
-    })
-      .then((data) => {
-        res.locals.m = data;
-        res.json(postData);
+      url: req.body.url
+    }).then((data) => {
+        res.locals.photos = data;
+        res.redirect('/index');
         next();
       }).catch((err) => res.json(err))
   },

@@ -1,26 +1,29 @@
 <% include ../partials/boilerplate %>
 
-<section>
+<div class="wrapper">
+  <div class="container">
 
-  <form action="/create" method="POST">
-    <div class="infield">
-      <input type="text" name="creator">
-    </div>
+    <form action="/posts" method="POST">
 
-    <div class="infield">
-      <input type="text" name="caption">
-    </div>
+      <!-- <div class="infield">
+        <input type="text" name="creator">
+      </div> -->
 
-    <div class="infield">
-      <input type="text" name="url">
-    </div>
+      <div class="infield">
+        <p>write a caption</p><input size="35" id="caption" type="text" name="caption">
+      </div>
 
-    <div class="infield">
-      <input type="submit" name="log it!">
-    </div>
+      <div class="infield">
+        <p>upload it</p><input size="35" id="url" type="text" name="url">
+      </div>
 
-  </form>
+      <div class="submit">
+        <input type="submit" name="post">
+      </div>
 
-</section>
+    </form>
+
+  </div><!-- closing container div -->
+</div><!-- closing wrapper -->
 
 <% include ../partials/end %>

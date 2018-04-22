@@ -6,5 +6,8 @@ module.exports = {
       data: res.locals.photos
     });
   },
+  createOne(req,res){
+    res.render('postViews/create')
+  },
 
 }

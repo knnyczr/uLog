@@ -17,9 +17,9 @@ module.exports = {
   },
   createPost(photos){
     return db.one(`
-      INSERT INTO photos (creator, caption, url)
-      VALUES($1, $2, $3)
-      `, [photos.creator, photos.caption, photos.url])
+      INSERT INTO photos (caption, url)
+      VALUES($1, $2)
+      `, [photos.caption, photos.url])
   },
   updatePost(post, id){
     return db.one(`
