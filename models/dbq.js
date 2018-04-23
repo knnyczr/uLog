@@ -19,7 +19,7 @@ module.exports = {
     return db.one(`
       INSERT INTO photos (caption, url)
       VALUES($1, $2)
-      `, [photos.caption, photos.url])
+      RETURNING *`, [photos.caption, photos.url])
   },
   updatePost(post, id){
     return db.one(`

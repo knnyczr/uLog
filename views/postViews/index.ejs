@@ -4,22 +4,20 @@
 <div class="wrapper">
 
 <% data.forEach((el) => { %>
-
     <div class="container">
-      <img src='<%=el.url%>' />
-
-      
+      <img src='<%= el.url %>' />
+      <p><%= el.caption %></p>
 
       <div class="comlike">
-      <i class="fas fa-comment"></i>
-      <i class="fas fa-thumbtack"></i>
-      <i class="fas fa-heart"></i>
-    </div>
+        <i class="fas fa-comment"></i>
+        <i class="fas fa-edit"></i>
+        <i class="fas fa-heart"></i>
+        <i class="fas fa-trash-alt"></i>
+      </div><!-- closing comlike -->
 
-    </div>
-
+    </div><!-- closing container -->
 <% }) %>
 
-</div>
+</div><!-- closing wrapper -->
 
 <% include ../partials/end %>

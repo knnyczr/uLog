@@ -8,10 +8,10 @@ r.route('/')
 
 r.route('/posts')
   .get(postController.index, views.showAllPosts)
+  .post(postController.createP, views.showAllPosts);
 
 r.route('/new')
   .get(views.createOne)
-  .post(postController.createP);
 
 r.route('/posts/:id')
   .put(postController.update)

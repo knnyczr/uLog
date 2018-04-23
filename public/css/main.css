@@ -43,9 +43,14 @@ input{
 }
 .comlike{
   display: flex;
+  /* position: absolute; */
+  right: 10px;
 }
-
-#nav{
+.container > p{
+  margin: 5px 10px;
+  font-size: 12px;
+}
+nav{
   display: flex;
   position: absolute;
   right: 80px;

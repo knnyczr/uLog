@@ -28,10 +28,10 @@ module.exports ={
       caption: req.body.caption,
       url: req.body.url
     }).then((data) => {
-        res.locals.photos = data;
-        res.redirect('/index');
+        // res.locals.photos = data;
+        res.redirect(`/posts/`);
         next();
-      }).catch((err) => res.json(err))
+      }).catch((err) => res.status(500).json({err:err}));
   },
   update(req, res, next){
     m.updatePost()
