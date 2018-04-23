@@ -1,6 +1,4 @@
-const pgp = require('pg-promise')();
-const dbConfig = require('../config/dbConfig');
-const db = pgp(dbConfig);
+const db = require('../config/dbConfig');
 
 module.exports = {
   findAllPosts(){
@@ -23,13 +21,12 @@ module.exports = {
   },
   updatePost(post, id){
     return db.one(`
-      UPDATE photos(creator, caption, url)
-      SET creator = $1,
-      caption = $2,
-      url = $3,
-      WHERE id = $4
+      UPDATE photos(caption, url)
+      SET caption = $1,
+      url = $2,
+      WHERE id = $3
       RETURNING *
-      `, [post.creator, post.caption, post.url], id)
+      `, [post.caption, post.url, id])
   },
   destroy(id){
     return db.none(`

@@ -22,6 +22,17 @@ module.exports ={
         next();
       });
   },
+  showOne(req,res,next){
+    m.findOne(req.params.id)
+      .then((data) => {
+        res.locals.photos = data;
+        next();
+      }).catch((err) => {
+        console.log(err);
+        res.json(err);
+        next();
+      })
+  },
   createP(req, res, next){
     m.createPost({
       // creator: req.body.creator,
@@ -34,10 +45,15 @@ module.exports ={
       }).catch((err) => res.status(500).json({err:err}));
   },
   update(req, res, next){
-    m.updatePost()
+    m.updatePost({
+      caption: req.body.caption,
+      url: req.body.url
+    }, req.params.id)
       .then((data) => {
-        res.locals.m = data;
-        res.json(data);
+        console.log(data);
+        res.locals.photos = data;
+        res.redirect('/edit')
+        // res.json(data);
         next();
       }).catch((err) => res.json(err))
     // res.render('postviews/index')

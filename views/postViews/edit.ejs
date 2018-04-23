@@ -1,0 +1,18 @@
+<% include ../partials/boilerplate %>
+
+<div class="wrapper">
+  <form action="/posts/<%= photos.id %>?_method=PUT" method="POST">
+  <div class="container">
+      <img src="<%= photos.url %>">
+
+      <input type="text" name="caption" placeholder="<%= photos.caption %>">
+      <input type="text" name="url" placeholder="<%= photos.url %>">
+      <input type="submit" value="Update it!">
+
+    <a href="/posts">Back to all posts</a>
+  </div>
+</form>
+
+</div>
+
+<% include ../partials/end %>

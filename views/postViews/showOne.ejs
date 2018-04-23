@@ -1,0 +1,32 @@
+<% include ../partials/boilerplate %>
+
+<div class="wrapper">
+  <form action="/posts/<%= photos.id %>?_method=PUT" method="POST">
+  <div class="container">
+
+      <img src="<%= photos.url %>">
+      <p><%= photos.caption %></p>
+
+      <div class="comlike">
+        <i class="fas fa-comment"></i>
+
+        <form action="/posts/<%= photos.id %>/edit" method="GET">
+        <button type="submit"><i class="fas fa-edit"></i></button>
+        </form>
+
+        <i class="fas fa-heart"></i>
+
+        <form action="/posts/<%= photos.id %>?_method=DELETE"  method="DELETE">
+        <button type="submit"><i class="fas fa-trash-alt"></i></button>
+        </form>
+
+      </div><!-- closing comlike -->
+
+
+
+  </div><!-- closing container -->
+  </form>
+
+</div>
+
+<% include ../partials/end %>

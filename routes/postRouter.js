@@ -11,10 +11,18 @@ r.route('/posts')
   .post(postController.createP, views.showAllPosts);
 
 r.route('/new')
-  .get(views.createOne)
+  .get(views.createOne);
+
+r.route('/posts/:id/edit')
+  .get(postController.showOne, views.edit)
+  .put(postController.update, views.showOne);
+
+r.route('/:id')
+  .put(postController.update);
 
 r.route('/posts/:id')
-  .put(postController.update)
+  .get(postController.showOne, views.showOne)
   .delete(postController.destroy);
+
 
   module.exports = r;
