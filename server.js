@@ -5,7 +5,9 @@ const bodyParser = require('body-parser');
 const router = require('./routes/router');
 const postRouter = require('./routes/postRouter');
 const session = require('express-session');
-const path = require('path')
+const path = require('path');
+const methodOverride = require('method-override');
+
 
 const authS = require('./users/auth/authService');
 const authR = require('./users/auth/authRouter')
@@ -19,6 +21,8 @@ app.set('view engine', 'ejs');
 //body parser
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
+app.use(methodOverride('_method'));
+
 // morgan logger
 app.use(logger('dev'));
 

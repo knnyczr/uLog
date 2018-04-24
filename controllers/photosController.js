@@ -51,13 +51,12 @@ module.exports ={
   },
   destroy(req, res, next){
     // res.render('postViews/index')
-    m.destroy(req.params.id)
+    m.destroy(parseInt(req.params.id))
       .then((data) => {
-        console.log()
-        res.send('destroy is working')
-      })
-      .catch((err) => {
-        res.json(err);
+        next();
+        // res.redirect(`/posts/`)
+      }).catch((err) => {
+        // res.json(err);
         next();
       });
   }

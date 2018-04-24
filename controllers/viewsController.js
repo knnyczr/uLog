@@ -23,7 +23,7 @@ module.exports = {
       data: res.locals.photos.id
     })
   },
-  // destroy(req,res){
-  //   res.redirect(``)
-  // }
-}
+  destroy(req,res){
+    res.redirect(`/posts/`)
+  },
+};

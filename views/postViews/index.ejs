@@ -13,12 +13,13 @@
         <!-- <form action="/posts/<%= el.id %>/edit" method="GET">
         <button type="submit"><i class="fas fa-edit"></i></button>
         </form> -->
-
+        <form action="/posts/<%= el.id %>?_method=PUT" method="POST">
         <a href="/posts/<%= el.id %>/edit"><i class="fas fa-edit"></i></a>
+        </form>
 
         <i class="fas fa-heart"></i>
 
-        <form action="/posts/<%= el.id %>?_method=DELETE"  method="DELETE">
+        <form method="POST" action="/posts/<%= el.id %>?_method=DELETE">
         <button type="submit"><i class="fas fa-trash-alt"></i></button>
         </form>
 
