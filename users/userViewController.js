@@ -1,4 +1,5 @@
 module.exports ={
+
   showloginForm(req,res){
     // res.send('login form here')
     res.render('../views/login')

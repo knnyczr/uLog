@@ -1,16 +1,7 @@
 const m = require('../models/dbq.js');
 
 module.exports ={
-  // index(req, res, next){
-  //   m.findAllposts()
-  //   .then((postsData) =>{
-  //     res.locals.m = postsData;
-  //     next();
-  //   }).catch((err) => {
-  //     res.json(err)
-  //     next();
-  //   });
-  // },
+
   index(req, res, next) {
     m.findAllPosts()
       .then(postData => {

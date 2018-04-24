@@ -6,7 +6,8 @@ CREATE TABLE users(
   email VARCHAR(30) NOT NULL,
   username VARCHAR(15) NOT NULL,
   password VARCHAR(20) NOT NULL,
-  image VARCHAR(20),
+  banner VARCHAR(100),
+  image VARCHAR(100),
   description VARCHAR(150)
 );
 
@@ -18,10 +19,10 @@ CREATE TABLE photos(
 );
 
 
-INSERT INTO users (email, username, password, image, description)
+INSERT INTO users (email, username, password, banner, image, description)
 VALUES
 ('isdc', 'peter', 'pass', 'vjnvkd', 'acsrvrsv'),
-('dc', 'kenny', 'pass', 'vjnvkd', 'acsrvrsv'),
+('dc', 'knny', 'pass', 'https://images.unsplash.com/photo-1516469635987-fcdf02d6017c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a6829a335e2308683c8baead1611406f&auto=format&fit=crop&w=1950&q=80', 'https://images.unsplash.com/profile-fb-1491237734-7bee2cb27a47.jpg?dpr=2&auto=format&fit=crop&w=128&h=128&q=60&cs=tinysrgb&crop=faces&bg=fff' ,'Designer, Developer, Coffee addict.'),
 ('is', 'aasim', 'pass', 'vjnvkd', 'acsrvrsv');
 
 INSERT INTO photos (creator, caption, url)
