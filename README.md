@@ -1,10 +1,10 @@
 # Project-2 - Ulog.
 
+## Project Description
+A "U" friendly digital space to allow it's user to express your "U"-ness. A blog that allows you to upload snippets of your life and both with other over stuff you love.
+
 ## PRIORITY MATRIX
 ![Alt text](/images/p-matrix.png?raw=true)
-
-## MISSION STATEMENT
-A "U" friendly digital space to allow it's user to express your "U"-ness. A blog that allows you to upload snippets of your life and both with other over stuff you love.
 
 ## MVP
 + User Login / Loggout
